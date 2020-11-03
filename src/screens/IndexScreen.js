@@ -4,7 +4,6 @@ import {
   Text,
   StyleSheet,
   FlatList,
-  Button,
   TouchableOpacity,
 } from "react-native";
 import { Context } from "../context/BlogContext";
@@ -15,7 +14,6 @@ const IndexScreen = ({ navigation }) => {
 
   return (
     <View>
-      <Button title="Add Post" onPress={addBlogPost} />
       <FlatList
         data={state}
         keyExtractor={(blogPost) => blogPost.title}
@@ -66,11 +64,3 @@ const styles = StyleSheet.create({
 });
 
 export default IndexScreen;
-
-// return {
-//   headerRight: () => (
-//     <TouchableOpacity onPress={() => navigation.navigate('Create')}>
-//       <Feather name="plus" size={30} />
-//     </TouchableOpacity>
-//   ),
-// };
